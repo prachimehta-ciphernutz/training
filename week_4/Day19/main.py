@@ -9,16 +9,14 @@ ALLOWED_EXTENSIONS = {".jpg", ".png", ".pdf"}
 
 @app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
-    # get file extension
+
     _, extension = os.path.splitext(file.filename)
 
-    # validate file type
     if extension.lower() not in ALLOWED_EXTENSIONS:
         raise HTTPException(
             status_code=400, detail = "Invalid filetype"
         )
     
-    # filepath
     filepath = f"uploads/{file.filename}"
 
     #save file locally
@@ -29,3 +27,5 @@ async def upload_file(file: UploadFile = File(...)):
         "message": "File upload successfully",
         "filename": file.filename
     }
+
+
