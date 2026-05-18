@@ -1,6 +1,5 @@
-__pycache__/
-*.pyc
+.env
 venv/
-.env/
 chroma_db/
-.vscode
+__pycache__
+*.pyc
