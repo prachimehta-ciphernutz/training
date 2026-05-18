@@ -1,0 +1,17 @@
+Artificial Intelligence is the simulation of human intelligence by machines.
+
+Machine Learning allows systems to learn from data.
+
+Deep Learning uses neural networks.
+
+Football is one of the most popular sports in the world.
+
+Cricket is widely played in India.
+
+Python is a programming language used in AI.
+
+The stock market fluctuates daily based on economic conditions.
+
+Natural Language Processing helps computers understand human language.
+
+Space exploration requires advanced rocket systems.
