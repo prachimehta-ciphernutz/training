@@ -1,0 +1,15 @@
+.venv/
+/venv
+.env
+__pycache__/
+*.pyc
+*.pyo
+logs/
+*.log
+uploads/
+chroma_db/
+.vscode/
+.DS_Store
+.pytest_cache/
+*.db
+*.sqlite3
