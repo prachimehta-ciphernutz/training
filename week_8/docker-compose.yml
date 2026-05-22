@@ -1,0 +1,44 @@
+services:
+
+  fastapi:
+    build: .
+    container_name: ai-api
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - .:/app
+
+    env_file:
+      - .env
+
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+
+    container_name: redis-cache
+
+    ports:
+      - "6379:6379"
+
+  postgres:
+    image: postgres:15
+
+    container_name: postgres-db
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: ai_assistant
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:      

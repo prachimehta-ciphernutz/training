@@ -13,3 +13,7 @@ langchain-google-genai
 langchain-chroma
 chromadb
 pypdf
+redis
+logger
+slowapi
+tenacity
